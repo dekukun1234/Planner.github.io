@@ -1,0 +1,183 @@
+main{
+    padding-top: 30px;
+}
+
+.container-fluid{
+height: 60px;
+}
+
+body {
+    background:#050530;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 140px;
+  }
+  /* boton para crear las cartas  */
+
+  #botoncrear{
+    padding-top: 10px;
+    margin-top: 10px; 
+    background: none; 
+    
+      
+  }
+
+  #botoncrear {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 70px;
+    border-radius: 60%;
+  }
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 250px;
+    background-color: whitesmoke;
+    padding: 60px 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 9999;
+    
+  }
+  
+  /* styles.css */
+
+/* Estilo para el botón de "Agregar Card" */
+#agregarcard {
+    background-color: green;
+  }
+  
+  /* Estilo para el botón de "Cancelar" */
+  button.cancel-button {
+    background-color: red;
+    margin-right: 10px; /* Añadimos un margen derecho para separar los botones */
+  }
+
+  
+  .modal-container input[type="text"],
+  .modal-container button {
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px ;
+    font-size: 16px;
+    width: 85%;
+
+    
+  }
+  /* Estilo opcional para centrar el botón crear dentro del div */
+  .modal-container button#botoncrear {
+    display: block;
+    margin: auto;
+  }
+    
+  .delete-button {
+    align-self: center;
+    background-color: #ff5252; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 8px 16px; /* Espaciado vertical y horizontal */
+    margin: 50px;
+    margin-bottom: 5px;
+    font-size: 14px; /* Tamaño de fuente */
+    border: 2px solid #ff5252; /* Borde sólido */
+    border-radius: 5px; /* Radio de borde para hacerlo redondeado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse sobre el botón */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color de fondo */
+    position: absolute; /* Posición absoluta para que el botón pueda moverse dentro de la card */
+    right: 5px; /* Mover el botón hacia la derecha */
+    bottom: 5px; /* Alinear el botón en la parte inferior de la card (opcional, según el diseño deseado) */
+  }
+  
+  .delete-button:hover {
+    background-color: #ff1a1a; /* Cambiar el color de fondo al pasar el mouse por encima */
+  }
+  
+  /* Estilos para las cards */
+/* .card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+   */
+ /* Estilos para los botones de color */
+
+
+ .color-button-container {
+    display: flex; /* Convertir el contenedor en un flex container */
+    align-items: center; /* Alinear los botones verticalmente en el centro (opcional) */
+  }
+  
+  .color-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+/* breakpoints / making responsive */
+
+  @media (max-width: 1080px) {
+    .nav {
+        padding: 15px;
+    }
+    selection {
+        padding: 3rem;
+    }
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .shop{
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 400px){
+    .nav {
+        padding: 11px;
+    }
+    .logo{
+        font-size: 1rem;
+    }
+    .cart{
+        width: 320px;
+    }
+}
+
+@media (max-width: 1360px){
+    .shop{
+        margin-top: 1rem !important;
+    }
+    .card{
+        width: 280px;
+    }
+}
